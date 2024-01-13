@@ -12,4 +12,5 @@ for(let i = 1; i <= 100; i++){
             gen.write(`\t\t\tbreak;\n`);
         }
     gen.write(`\t}\n`);
+    gen.write('\tbreak;\n');
 }
