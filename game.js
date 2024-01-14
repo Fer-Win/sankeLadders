@@ -2020,12 +2020,13 @@ function updateGame() {
   playerTargetPos.x = col * blockSize + blockSize / 10;
   playerTargetPos.y = canvas.height - ((row + 1) * blockSize + blockSize / 10);
   document.getElementById("info").innerText =
-    "Current Position: " +
-    playerPos +
-    "\nDice Roll: " +
-    diceValue +
-    "\nNext Position: " +
-    nextPos;
+    "\nDice Roll: " + diceValue + "\nCurrent Position: " + playerPos;
+  if (nextPos < playerPos) {
+    document.getElementById("info").innerText =
+      "Its a snake at" + playerPos + diceValue + "to" + nextPos;
+  }
+  //"\nNext Position: " +
+  // nextPos;
   if (playerPos === 100) {
     document.getElementById("info").innerText =
       "Player wins by reaching position 100!";
