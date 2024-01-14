@@ -76,7 +76,7 @@ const play = (p, n) => {
       }
       break;
     case 4:
-      position = 14;
+     position =14;
       break;
     case 5:
       switch (diceRoll) {
@@ -1988,7 +1988,6 @@ function updateGame() {
       "It's a ladder  at " + temp + " to " + nextPos;
   } else {
     console.log(`Next position is ${nextPos}`);
-    document.getElementById("infob").innerText = "";
   }
   if (nextPos > 100) {
     return;
@@ -2012,7 +2011,10 @@ function updateGame() {
 
   document.getElementById("info").innerText =
     "\nDice Roll: " + diceValue + "\nCurrent Position: " + playerPos;
-
+  if (nextPos < playerPos) {
+    document.getElementById("info").innerText =
+      "Its a snake at" + playerPos + diceValue + "to" + nextPos;
+  }
   //"\nNext Position: " +
   // nextPos;
   if (playerPos === 100) {
@@ -2021,50 +2023,49 @@ function updateGame() {
   }
 }
 function animate() {
-  var dx = playerTargetPos.x - playerVisualPos.x;
-  var dy = playerTargetPos.y - playerVisualPos.y;
-  var directionX = dx > 0 ? 1 : -1;
-  var directionY = dy > 0 ? 1 : -1;
-  if (Math.abs(dx) > playerSpeed) {
-    playerVisualPos.x += playerSpeed * directionX;
-  }
-  if (Math.abs(dy) > playerSpeed) {
-    playerVisualPos.y += playerSpeed * directionY;
-  }
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  for (var y = 0; y <= 9; y++) {
-    for (var x = 0; x <= 9; x++) {
-      var xPos = x * blockSize;
-      var yPos = y * blockSize;
-      ctx.strokeRect(xPos, yPos, blockSize, blockSize);
-      var number;
-      if (y % 2 == 0) {
-        number = (9 - y) * 10 + (10 - x);
-      } else {
-        number = (9 - y) * 10 + x + 1;
-      }
-      ctx.fillText(number, xPos + blockSize / 2, yPos + blockSize / 2);
+    var dx = playerTargetPos.x - playerVisualPos.x;
+    var dy = playerTargetPos.y - playerVisualPos.y;
+    var directionX = dx > 0 ? 1 : -1;
+    var directionY = dy > 0 ? 1 : -1;
+  
+    if (Math.abs(dx) > playerSpeed) {
+      playerVisualPos.x += playerSpeed * directionX;
     }
+    if (Math.abs(dy) > playerSpeed) {
+      playerVisualPos.y += playerSpeed * directionY;
+    }
+  
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+    for (var y = 0; y <= 9; y++) {
+      for (var x = 0; x <= 9; x++) {
+        var xPos = x * blockSize;
+        var yPos = y * blockSize;
+        ctx.strokeRect(xPos, yPos, blockSize, blockSize);
+        var number;
+        if (y % 2 == 0) {
+          number = (9 - y) * 10 + (10 - x);
+        } else {
+          number = (9 - y) * 10 + x + 1;
+        }
+        ctx.fillText(number, xPos + blockSize / 2, yPos + blockSize / 2);
+      }
+    }
+  
+    var adjustedXNegative = Math.max(0, Math.min(playerVisualPos.x - 10, canvas.width - blockSize));
+    var adjustedXPositive = Math.max(0, Math.min(playerVisualPos.x, canvas.width - blockSize));
+    var adjustedYNegative = Math.max(0, Math.min(playerVisualPos.y - 10, canvas.height - blockSize));
+    var adjustedYPositive = Math.max(0, Math.min(playerVisualPos.y, canvas.height - blockSize));
+  
+    // Use the correct adjustment based on the direction
+    var adjustedX = directionX === -1 ? adjustedXNegative : adjustedXPositive;
+    var adjustedY = directionY === -1 ? adjustedYNegative : adjustedYPositive;
+  
+    ctx.fillRect(adjustedX, adjustedY+10, blockSize, blockSize);
+    
+    requestAnimationFrame(animate);
   }
-
-  var adjustedXNegative = Math.max(
-    0,
-    Math.min(playerVisualPos.x - 10, canvas.width - blockSize)
-  );
-  var adjustedXPositive = Math.max(
-    0,
-    Math.min(playerVisualPos.x, canvas.width - blockSize)
-  );
-  var adjustedY = Math.max(
-    0,
-    Math.min(playerVisualPos.y, canvas.height - blockSize)
-  );
-
-  // Use the correct adjustment based on the direction
-  var adjustedX = directionX === -1 ? adjustedXNegative : adjustedXPositive;
-
-  ctx.fillRect(adjustedX, adjustedY, blockSize, blockSize);
-  requestAnimationFrame(animate);
-}
+  
+  
 animate();
 document.getElementById("rollButton").addEventListener("click", updateGame);
