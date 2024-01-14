@@ -1983,7 +1983,7 @@ case 95:
 			position = 100;
 			break;
 		case 6:
-			position = 101;
+			position = 95;
 			break;
 	}
 	break;
@@ -2002,10 +2002,10 @@ case 96:
 			position = 100;
 			break;
 		case 5:
-			position = 101;
+			position = 96;
 			break;
 		case 6:
-			position = 102;
+			position = 96;
 			break;
 	}
 	break;
@@ -2021,13 +2021,13 @@ case 97:
 			position = 100;
 			break;
 		case 4:
-			position = 101;
+			position = 97;
 			break;
 		case 5:
-			position = 102;
+			position = 97;
 			break;
 		case 6:
-			position = 103;
+			position = 97;
 			break;
 	}
 	break;
@@ -2040,16 +2040,16 @@ case 98:
 			position = 100;
 			break;
 		case 3:
-			position = 101;
+			position = 98;
 			break;
 		case 4:
-			position = 102;
+			position = 98;
 			break;
 		case 5:
-			position = 103;
+			position = 98;
 			break;
 		case 6:
-			position = 104;
+			position = 98;
 			break;
 	}
 	break;
@@ -2059,43 +2059,24 @@ case 99:
 			position = 100;
 			break;
 		case 2:
-			position = 101;
+			position = 99;
 			break;
 		case 3:
-			position = 102;
+			position = 99;
 			break;
 		case 4:
-			position = 103;
+			position = 99;
 			break;
 		case 5:
-			position = 104;
+			position = 99;
 			break;
 		case 6:
-			position = 105;
+			position = 99;
 			break;
 	}
 	break;
 case 100:
-	switch(diceRoll){
-		case 1:
-			position = 101;
-			break;
-		case 2:
-			position = 102;
-			break;
-		case 3:
-			position = 103;
-			break;
-		case 4:
-			position = 104;
-			break;
-		case 5:
-			position = 105;
-			break;
-		case 6:
-			position = 106;
-			break;
-	}
+	position = 100;
 	break;
 
   }
