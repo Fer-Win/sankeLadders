@@ -1996,8 +1996,15 @@ function updateGame() {
 
   if (nextPos < playerPos) {
     console.log(`It's a snake at ${playerPos + diceValue} to ${nextPos}`);
+    var temp = playerPos + diceValue;
+    document.getElementById("infob").innerText =
+      "It's a snake at " + temp + " to " + nextPos;
   } else if (nextPos > playerPos + diceValue) {
     console.log(`It's a ladder at ${playerPos + diceValue} to ${nextPos}`);
+
+    var temp = playerPos + diceValue;
+    document.getElementById("infob").innerText =
+      "It's a ladder  at " + temp + " to " + nextPos;
   } else {
     console.log(`Next position is ${nextPos}`);
   }
@@ -2017,8 +2024,10 @@ function updateGame() {
   if (row % 2 == 1) {
     col = 9 - col;
   }
+
   playerTargetPos.x = col * blockSize + blockSize / 10;
   playerTargetPos.y = canvas.height - ((row + 1) * blockSize + blockSize / 10);
+
   document.getElementById("info").innerText =
     "\nDice Roll: " + diceValue + "\nCurrent Position: " + playerPos;
   if (nextPos < playerPos) {
