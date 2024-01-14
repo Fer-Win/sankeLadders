@@ -76,7 +76,7 @@ const play = (p, n) => {
       }
       break;
     case 4:
-     position =14;
+      position = 14;
       break;
     case 5:
       switch (diceRoll) {
@@ -1988,6 +1988,7 @@ function updateGame() {
       "It's a ladder  at " + temp + " to " + nextPos;
   } else {
     console.log(`Next position is ${nextPos}`);
+    document.getElementById("infob").innerText = "";
   }
   if (nextPos > 100) {
     return;
@@ -2011,10 +2012,7 @@ function updateGame() {
 
   document.getElementById("info").innerText =
     "\nDice Roll: " + diceValue + "\nCurrent Position: " + playerPos;
-  if (nextPos < playerPos) {
-    document.getElementById("info").innerText =
-      "Its a snake at" + playerPos + diceValue + "to" + nextPos;
-  }
+
   //"\nNext Position: " +
   // nextPos;
   if (playerPos === 100) {
@@ -2049,14 +2047,23 @@ function animate() {
     }
   }
 
-    var adjustedXNegative = Math.max(0, Math.min(playerVisualPos.x - 10, canvas.width - blockSize));
-    var adjustedXPositive = Math.max(0, Math.min(playerVisualPos.x, canvas.width - blockSize));
-    var adjustedY = Math.max(0, Math.min(playerVisualPos.y, canvas.height - blockSize));
+  var adjustedXNegative = Math.max(
+    0,
+    Math.min(playerVisualPos.x - 10, canvas.width - blockSize)
+  );
+  var adjustedXPositive = Math.max(
+    0,
+    Math.min(playerVisualPos.x, canvas.width - blockSize)
+  );
+  var adjustedY = Math.max(
+    0,
+    Math.min(playerVisualPos.y, canvas.height - blockSize)
+  );
 
-    // Use the correct adjustment based on the direction
-    var adjustedX = directionX === -1 ? adjustedXNegative : adjustedXPositive;
+  // Use the correct adjustment based on the direction
+  var adjustedX = directionX === -1 ? adjustedXNegative : adjustedXPositive;
 
-    ctx.fillRect(adjustedX, adjustedY, blockSize, blockSize);
+  ctx.fillRect(adjustedX, adjustedY, blockSize, blockSize);
   requestAnimationFrame(animate);
 }
 animate();
