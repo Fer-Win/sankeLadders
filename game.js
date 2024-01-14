@@ -21,7 +21,7 @@ const play = (p, n) => {
           position = 4;
           break;
         case 4:
-          position = 5;
+          position = 14;
           break;
         case 5:
           position = 6;
@@ -37,7 +37,7 @@ const play = (p, n) => {
           position = 3;
           break;
         case 2:
-          position = 4;
+          position = 14;
           break;
         case 3:
           position = 5;
@@ -56,7 +56,7 @@ const play = (p, n) => {
     case 3:
       switch (diceRoll) {
         case 1:
-          position = 4;
+          position = 14;
           break;
         case 2:
           position = 5;
@@ -76,26 +76,7 @@ const play = (p, n) => {
       }
       break;
     case 4:
-      switch (diceRoll) {
-        case 1:
-          position = 5;
-          break;
-        case 2:
-          position = 6;
-          break;
-        case 3:
-          position = 7;
-          break;
-        case 4:
-          position = 8;
-          break;
-        case 5:
-          position = 31;
-          break;
-        case 6:
-          position = 10;
-          break;
-      }
+     position =14;
       break;
     case 5:
       switch (diceRoll) {
