@@ -73,7 +73,7 @@ case 3:
 			position = 8;
 			break;
 		case 6:
-			position = 9;
+			position = 31;
 			break;
 	}
 	break;
@@ -92,7 +92,7 @@ case 4:
 			position = 8;
 			break;
 		case 5:
-			position = 9;
+			position = 31;
 			break;
 		case 6:
 			position = 10;
@@ -111,7 +111,7 @@ case 5:
 			position = 8;
 			break;
 		case 4:
-			position = 9;
+			position = 31;
 			break;
 		case 5:
 			position = 10;
@@ -130,7 +130,7 @@ case 6:
 			position = 8;
 			break;
 		case 3:
-			position = 9;
+			position = 31;
 			break;
 		case 4:
 			position = 10;
@@ -149,7 +149,7 @@ case 7:
 			position = 8;
 			break;
 		case 2:
-			position = 9;
+			position = 31;
 			break;
 		case 3:
 			position = 10;
@@ -168,7 +168,7 @@ case 7:
 case 8:
 	switch(diceRoll){
 		case 1:
-			position = 9;
+			position = 31;
 			break;
 		case 2:
 			position = 10;
@@ -188,26 +188,7 @@ case 8:
 	}
 	break;
 case 9:
-	switch(diceRoll){
-		case 1:
-			position = 10;
-			break;
-		case 2:
-			position = 11;
-			break;
-		case 3:
-			position = 12;
-			break;
-		case 4:
-			position = 13;
-			break;
-		case 5:
-			position = 14;
-			break;
-		case 6:
-			position = 15;
-			break;
-	}
+	position=31;
 	break;
 case 10:
 	switch(diceRoll){
@@ -337,7 +318,7 @@ case 15:
 			position = 20;
 			break;
 		case 6:
-			position = 21;
+			position = 42;
 			break;
 	}
 	break;
@@ -356,7 +337,7 @@ case 16:
 			position = 20;
 			break;
 		case 5:
-			position = 21;
+			position = 42;
 			break;
 		case 6:
 			position = 22;
@@ -375,7 +356,7 @@ case 17:
 			position = 20;
 			break;
 		case 4:
-			position = 21;
+			position = 42;
 			break;
 		case 5:
 			position = 22;
@@ -394,7 +375,7 @@ case 18:
 			position = 20;
 			break;
 		case 3:
-			position = 21;
+			position = 42;
 			break;
 		case 4:
 			position = 22;
@@ -413,7 +394,7 @@ case 19:
 			position = 20;
 			break;
 		case 2:
-			position = 21;
+			position = 42;
 			break;
 		case 3:
 			position = 22;
@@ -432,7 +413,7 @@ case 19:
 case 20:
 	switch(diceRoll){
 		case 1:
-			position = 21;
+			position = 42;
 			break;
 		case 2:
 			position = 22;
@@ -452,26 +433,7 @@ case 20:
 	}
 	break;
 case 21:
-	switch(diceRoll){
-		case 1:
-			position = 22;
-			break;
-		case 2:
-			position = 23;
-			break;
-		case 3:
-			position = 24;
-			break;
-		case 4:
-			position = 25;
-			break;
-		case 5:
-			position = 26;
-			break;
-		case 6:
-			position = 27;
-			break;
-	}
+	position=42;
 	break;
 case 22:
 	switch(diceRoll){
@@ -491,7 +453,7 @@ case 22:
 			position = 27;
 			break;
 		case 6:
-			position = 28;
+			position = 84;
 			break;
 	}
 	break;
@@ -510,7 +472,7 @@ case 23:
 			position = 27;
 			break;
 		case 5:
-			position = 28;
+			position = 84;
 			break;
 		case 6:
 			position = 29;
@@ -529,7 +491,7 @@ case 24:
 			position = 27;
 			break;
 		case 4:
-			position = 28;
+			position = 84;
 			break;
 		case 5:
 			position = 29;
@@ -548,7 +510,7 @@ case 25:
 			position = 27;
 			break;
 		case 3:
-			position = 28;
+			position = 84;
 			break;
 		case 4:
 			position = 29;
@@ -567,7 +529,7 @@ case 26:
 			position = 27;
 			break;
 		case 2:
-			position = 28;
+			position = 84;
 			break;
 		case 3:
 			position = 29;
@@ -586,7 +548,7 @@ case 26:
 case 27:
 	switch(diceRoll){
 		case 1:
-			position = 28;
+			position = 84;
 			break;
 		case 2:
 			position = 29;
@@ -606,26 +568,7 @@ case 27:
 	}
 	break;
 case 28:
-	switch(diceRoll){
-		case 1:
-			position = 29;
-			break;
-		case 2:
-			position = 30;
-			break;
-		case 3:
-			position = 31;
-			break;
-		case 4:
-			position = 32;
-			break;
-		case 5:
-			position = 33;
-			break;
-		case 6:
-			position = 34;
-			break;
-	}
+		position = 84;
 	break;
 case 29:
 	switch(diceRoll){
@@ -997,7 +940,7 @@ case 45:
 			position = 50;
 			break;
 		case 6:
-			position = 51;
+			position = 67;
 			break;
 	}
 	break;
@@ -1016,7 +959,7 @@ case 46:
 			position = 50;
 			break;
 		case 5:
-			position = 51;
+			position = 67;
 			break;
 		case 6:
 			position = 52;
@@ -1035,7 +978,7 @@ case 47:
 			position = 50;
 			break;
 		case 4:
-			position = 51;
+			position = 67;
 			break;
 		case 5:
 			position = 52;
@@ -1054,7 +997,7 @@ case 48:
 			position = 50;
 			break;
 		case 3:
-			position = 51;
+			position = 67;
 			break;
 		case 4:
 			position = 52;
@@ -1073,7 +1016,7 @@ case 49:
 			position = 50;
 			break;
 		case 2:
-			position = 51;
+			position = 67;
 			break;
 		case 3:
 			position = 52;
@@ -1092,7 +1035,7 @@ case 49:
 case 50:
 	switch(diceRoll){
 		case 1:
-			position = 51;
+			position = 67;
 			break;
 		case 2:
 			position = 52;
@@ -1112,26 +1055,7 @@ case 50:
 	}
 	break;
 case 51:
-	switch(diceRoll){
-		case 1:
-			position = 52;
-			break;
-		case 2:
-			position = 53;
-			break;
-		case 3:
-			position = 54;
-			break;
-		case 4:
-			position = 55;
-			break;
-		case 5:
-			position = 56;
-			break;
-		case 6:
-			position = 57;
-			break;
-	}
+	position =67;
 	break;
 case 52:
 	switch(diceRoll){
@@ -1459,7 +1383,7 @@ case 66:
 			position = 71;
 			break;
 		case 6:
-			position = 72;
+			position = 91;
 			break;
 	}
 	break;
@@ -1478,7 +1402,7 @@ case 67:
 			position = 71;
 			break;
 		case 5:
-			position = 72;
+			position = 91;
 			break;
 		case 6:
 			position = 73;
@@ -1497,7 +1421,7 @@ case 68:
 			position = 71;
 			break;
 		case 4:
-			position = 72;
+			position = 91;
 			break;
 		case 5:
 			position = 73;
@@ -1516,7 +1440,7 @@ case 69:
 			position = 71;
 			break;
 		case 3:
-			position = 72;
+			position = 91;
 			break;
 		case 4:
 			position = 73;
@@ -1535,7 +1459,7 @@ case 70:
 			position = 71;
 			break;
 		case 2:
-			position = 72;
+			position = 91;
 			break;
 		case 3:
 			position = 73;
@@ -1554,7 +1478,7 @@ case 70:
 case 71:
 	switch(diceRoll){
 		case 1:
-			position = 72;
+			position = 91;
 			break;
 		case 2:
 			position = 73;
@@ -1574,26 +1498,7 @@ case 71:
 	}
 	break;
 case 72:
-	switch(diceRoll){
-		case 1:
-			position = 73;
-			break;
-		case 2:
-			position = 74;
-			break;
-		case 3:
-			position = 75;
-			break;
-		case 4:
-			position = 76;
-			break;
-		case 5:
-			position = 77;
-			break;
-		case 6:
-			position = 78;
-			break;
-	}
+	position = 91;
 	break;
 case 73:
 	switch(diceRoll){
@@ -1635,7 +1540,7 @@ case 74:
 			position = 79;
 			break;
 		case 6:
-			position = 80;
+			position = 99;
 			break;
 	}
 	break;
@@ -1654,7 +1559,7 @@ case 75:
 			position = 79;
 			break;
 		case 5:
-			position = 80;
+			position = 99;
 			break;
 		case 6:
 			position = 81;
@@ -1673,7 +1578,7 @@ case 76:
 			position = 79;
 			break;
 		case 4:
-			position = 80;
+			position = 99;
 			break;
 		case 5:
 			position = 81;
@@ -1692,7 +1597,7 @@ case 77:
 			position = 79;
 			break;
 		case 3:
-			position = 80;
+			position = 99;
 			break;
 		case 4:
 			position = 81;
@@ -1711,7 +1616,7 @@ case 78:
 			position = 79;
 			break;
 		case 2:
-			position = 80;
+			position = 99;
 			break;
 		case 3:
 			position = 81;
@@ -1730,7 +1635,7 @@ case 78:
 case 79:
 	switch(diceRoll){
 		case 1:
-			position = 80;
+			position = 99;
 			break;
 		case 2:
 			position = 81;
@@ -1750,26 +1655,7 @@ case 79:
 	}
 	break;
 case 80:
-	switch(diceRoll){
-		case 1:
-			position = 81;
-			break;
-		case 2:
-			position = 82;
-			break;
-		case 3:
-			position = 83;
-			break;
-		case 4:
-			position = 84;
-			break;
-		case 5:
-			position = 85;
-			break;
-		case 6:
-			position = 86;
-			break;
-	}
+	position = 99;
 	break;
 case 81:
 	switch(diceRoll){
