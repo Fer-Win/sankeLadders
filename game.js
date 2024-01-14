@@ -2048,7 +2048,15 @@ function animate() {
       ctx.fillText(number, xPos + blockSize / 2, yPos + blockSize / 2);
     }
   }
-  ctx.fillRect(playerVisualPos.x, playerVisualPos.y, blockSize, blockSize);
+
+    var adjustedXNegative = Math.max(0, Math.min(playerVisualPos.x - 10, canvas.width - blockSize));
+    var adjustedXPositive = Math.max(0, Math.min(playerVisualPos.x, canvas.width - blockSize));
+    var adjustedY = Math.max(0, Math.min(playerVisualPos.y, canvas.height - blockSize));
+
+    // Use the correct adjustment based on the direction
+    var adjustedX = directionX === -1 ? adjustedXNegative : adjustedXPositive;
+
+    ctx.fillRect(adjustedX, adjustedY, blockSize, blockSize);
   requestAnimationFrame(animate);
 }
 animate();
