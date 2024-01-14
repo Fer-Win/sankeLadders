@@ -2260,7 +2260,14 @@ function updateGame() {
     var diceValue = rollDice();
     // var nextPos = playerPos + diceValue;
     var nextPos = play(playerPos,diceValue);
-    console.log(`Next position is ${nextPos}`);
+   
+    if(nextPos<playerPos){
+        console.log(`It's a snake at ${playerPos+diceValue} to ${nextPos}`);
+    }else if(nextPos>(playerPos+diceValue)){
+        console.log(`It's a ladder at ${playerPos+diceValue} to ${nextPos}`);
+    }else{
+        console.log(`Next position is ${nextPos}`);
+    }
     if (nextPos > 100) {
         return;
     }
